@@ -1,3 +1,7 @@
+/**
+ * Sets the tabs for the projects
+ */
+
 import { Tabs } from 'expo-router';
 
 export default function TabLayout() {

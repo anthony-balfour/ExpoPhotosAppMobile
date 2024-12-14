@@ -1,5 +1,8 @@
 // View is for organizing layouts similiar to div in HTML
 // Text is a component for displaying text
+/**
+ * adding a layout
+ */
 
 import { Text, View, StyleSheet } from "react-native";
 import {Link} from 'expo-router';
