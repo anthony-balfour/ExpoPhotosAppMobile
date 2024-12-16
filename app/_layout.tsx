@@ -11,9 +11,14 @@
  * const styles = StyleSheet.create({
  *
  * })
+ *
+ *  Every file inside app directory is either a layout file or a route file.
  */
 
 import { Stack } from "expo-router";
+
+// library for popular icon sets
+import {Ionicons} from "@expo/vector-icons";
 
 // Root Layout is the starting point for navigation and screens for the app, defining
 // the navigation structure
