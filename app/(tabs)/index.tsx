@@ -12,6 +12,8 @@ import Button from "@/components/Button";
 // cross image support component
 import {Image} from "expo-image";
 
+// @ is a custom path alias, meaning its a path shortcut for the root directory
+// defined in tsconfig.json
 const PlaceholderImage = require('@/assets/images/background-image.png')
 
 export default function Index() {
