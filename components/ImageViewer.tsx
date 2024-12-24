@@ -5,11 +5,13 @@
 import {StyleSheet} from 'react-native';
 import {Image, type ImageSource} from "expo-image";
 
-// defines the type Props so that whenever an object is passed into
-// ImageViewer, which are props, it type checks the params
-// it allows easy additions if more params need to be added as
-// well as a central location to manage imgSource type
-//
+/**
+ defines the type Props so that whenever an object is passed into
+ ImageViewer, which are props, it type checks the params
+ it allows easy additions if more params need to be added as
+ well as a central location to manage imgSource type
+ *
+ */
 type Props = {
   imgSource: ImageSource;
   selectedImage?: string;

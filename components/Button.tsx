@@ -1,6 +1,14 @@
+/**
+ * This component is the Button component which uses the Pressable component from
+ * React Native and uses icons from FontAwesome
+ */
+
 import {StyleSheet, View, Pressable, Text} from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome'
 
+/**
+ * Sets a new type called Props to an object with types set for each attribute
+ */
 type Props = {
   label: string;
   theme?: 'primary'
@@ -11,6 +19,7 @@ export default function Button({label, theme, onPress} : Props) {
   if (theme === 'primary'){
     return (
       <View
+      // the style prop takes in an array of styles, with the rightmost the highest priority
         style={[
           styles.buttonContainer, {borderWidth: 4, borderColor: '#ffd33d', borderRadius: 18},
         ]}>
