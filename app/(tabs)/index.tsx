@@ -7,7 +7,6 @@
 import { Text, View, StyleSheet } from "react-native";
 import {Link} from 'expo-router';
 import ImageViewer from "@/components/ImageViewer";
-
 import { useState } from 'react';
 
 import Button from "@/components/Button";
@@ -20,6 +19,7 @@ import {Image} from "expo-image";
 // @ is a custom path alias, meaning its a path shortcut for the root directory
 // defined in tsconfig.json
 const PlaceholderImage = require('@/assets/images/background-image.png')
+
 
 export default function Index() {
 
@@ -35,6 +35,8 @@ export default function Index() {
       quality: 1,
     });
 
+    // result of launchImageLibraryAsync returns info on the image including
+    // the uri of the image
     if (!result.canceled) {
       console.log(result);
       // accessing the uri from the returned image object
