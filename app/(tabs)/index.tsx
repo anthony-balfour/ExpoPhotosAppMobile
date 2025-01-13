@@ -26,6 +26,7 @@ export default function Index() {
   // the <> represent a Type generic for the state variable. Use state returns an array of two values
   // state var, function to change it. The (undefined) is the intial value for the state variable
   const [selectedImage, setSelectedImage] = useState< string | undefined>(undefined);
+  const [showAppOptions, setShowAppOptions] = useState<boolean>(false);
 
   const pickImageAsync = async () => {
     // launchImageLibraryAsync returns an object about the selected image
@@ -39,6 +40,7 @@ export default function Index() {
     // the uri of the image
     if (!result.canceled) {
       console.log(result);
+      setShowAppOptions(true);
       // accessing the uri from the returned image object
       setSelectedImage(result.assets[0].uri)
     } else {
@@ -55,10 +57,14 @@ export default function Index() {
       <View style={styles.imageContainer}>
         <ImageViewer imgSource={PlaceholderImage} selectedImage = {selectedImage}/>
       </View>
+      {showAppOptions ? (
+        <View />
+      ) : (
       <View style={styles.footerContainer}>
         <Button label= "Choose a photo" theme="primary" onPress={pickImageAsync} />
         <Button label="Use this photo" />
       </View>
+    )}
     </View>
   );
 }
